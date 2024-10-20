@@ -8,11 +8,15 @@ This project implements a real-time data processing system that monitors weather
    
     git clone https://github.com/priya-nb695/weather-monitoring-app.git
 
-2. Navigate to the root directory and install dependencies: 
+2. Install Monogodb for storing 
+
+   https://www.mongodb.com/try/download/community    
+
+3. Navigate to the root directory and install dependencies: 
    
     cd  weather-monitoring-system
     
-3. Navigate to Backend
+4. Navigate to Backend
 
      cd backend 
      npm install
@@ -23,8 +27,9 @@ This project implements a real-time data processing system that monitors weather
     # Setup Environment Variables (env file)  in backend  : Create a .env file with the following fields:
     .env ---> with this 
      ex:   WEATHER_API_KEY=your_api_key
-           PORT=3005
-4. Navigate to the frontend directory and install dependencies
+           PORT=3001
+
+5. Navigate to the frontend directory and install dependencies
    
     cd weather-frontend
     npm install
@@ -32,27 +37,33 @@ This project implements a real-time data processing system that monitors weather
     npm i  react-chartjs-2 chart.js
 
 
-5. Start the backend server:
+6. Start the backend server:
    
    cd backend
    node index.js
   
-6. Start the frontend app:
+7. Start the frontend app:
 
    cd weather-frontend
    npm start
 
-7. To test backend 
+8. To test backend 
    cd backend
    npm test
 
 
+   
 # Usage Instructions
 
-The ui will fetch the stored data from backend and display in the bar graphs 
+Start the backend server first then frontend 
+
+The ui will fetch the stored data from backend and display in the bar graphs .
 hover the mouse on the bargraph  to see the avg, min, max tempeature of the city of the previous  day (because it saves the data of that day in midnight)
 
-The  data will be fecthed in every 5 mins and it can be seen in the backend dir console
+(If the data not saved  in db it will use sample to show result )
+
+The  data will be fecthed in every 2 mins and it can be seen in the backend dir console and in the UI its shown as current weather data (if the  readingis  NA , wait for second reading  then cange the city and check)
+the user can select the city from the provided dropdown 
 
 The  data(the aggregrated data like avg, min, max) will be stored in database at midnight of every day 
 

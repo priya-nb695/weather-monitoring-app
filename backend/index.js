@@ -106,8 +106,8 @@ function checkTemperatureAlert(city, temperature) {
   }
 }
 
-// Schedule API calls every 5 minutes
-cron.schedule('*/5 * * * *', () => {
+// Schedule API calls every 2 minutes( can changed to any time  interval)
+cron.schedule('*/2 * * * *', () => {
   console.log('Fetching weather data for cities...');
   cities.forEach(city => fetchWeatherData(city));
 });
@@ -198,6 +198,30 @@ app.post('/add-sample-data', async (req, res) => {
     res.status(500).send('Error adding sample data: ' + error.message);
   }
 });
+
+// Define a route to get current weather data
+app.get('/current-weather', (req, res) => {
+  const currentWeatherData = cities.map(city => {
+    const { tempReadings, weatherConditions, maxTemp, minTemp } = cityData[city];
+    
+    // Get the latest temperature and condition
+    const latestTemp = tempReadings.length > 0 ? tempReadings[tempReadings.length - 1] : 'N/A'; // Default to 'N/A'
+    const latestCondition = weatherConditions.length > 0 ? weatherConditions[weatherConditions.length - 1] : 'N/A'; // Default to 'N/A'
+
+    return {
+      city,
+      latestTemp,
+      latestCondition,
+      maxTemp: maxTemp === -Infinity ? 'N/A' : maxTemp, // Default if maxTemp is -Infinity
+      minTemp: minTemp === Infinity ? 'N/A' : minTemp, // Default if minTemp is Infinity
+    };
+  });
+
+  res.json(currentWeatherData);
+  console.log(currentWeatherData);
+});
+
+
 
 
 //start the server
