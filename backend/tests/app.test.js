@@ -1,7 +1,7 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
-const app = require('./index'); // Adjust path to your main file
-const connectDB = require('./db'); // Ensure this connects to your test DB
+const {app,convertToCelsius }= require('../index'); 
+const connectDB = require('../db'); 
 
 // Connect to MongoDB before all tests
 beforeAll(async () => {

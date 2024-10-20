@@ -178,7 +178,9 @@ app.get('/weather-summaries', async (req, res) => {
     res.status(500).send('Server error');
   }
 });
+
 // Temporary route to insert sample data
+//adding for testing purpose can be removed when the real data gets stored on db
 app.post('/add-sample-data', async (req, res) => {
   try {
     const sampleData = [
@@ -198,7 +200,10 @@ app.post('/add-sample-data', async (req, res) => {
 });
 
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+//start the server
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+module.exports={app,convertToCelsius};
