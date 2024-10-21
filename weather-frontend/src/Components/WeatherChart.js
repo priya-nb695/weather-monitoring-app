@@ -104,7 +104,7 @@ const WeatherChart = () => {
 
     return (
         <div>
-            <h1>Weather Monitoring</h1>
+            <h1>Weather Monitoring App</h1>
             
             <label htmlFor="citySelect">Select City: </label>
             <select
@@ -138,8 +138,11 @@ const WeatherChart = () => {
                     )}
                 </div>
             )}
-
+            <div>
+            <h2>Daily Weather Summaries</h2>
             <Bar data={data} options={{ scales: { y: { beginAtZero: true } } }} />
+            </div>
+          
         </div>
     );
 };

@@ -57,15 +57,15 @@ This project implements a real-time data processing system that monitors weather
 
 Start the backend server first then frontend 
 
-The ui will fetch the stored data from backend and display in the bar graphs .
-hover the mouse on the bargraph  to see the avg, min, max tempeature of the city of the previous  day (because it saves the data of that day in midnight)
+The  data will be fecthed in every 2 mins and it can be seen in the backend dir console and in the UI its shown as current weather data (if the  readingis  NA , wait for second reading  then change the city and check)
+The user can select the city from the provided dropdown
+
+The  data(the aggregrated data like avg, min, max) will be stored in database at midnight of every day 
+The UI will fetch the stored data from backend and The Visualization has been implemented to  display  the Results in the bar graphs.
+hover the mouse on the bargraph  to see the avg, min, max tempeature of the city of the previous day (because it saves the data of that day in midnight)
 
 (If the data not saved  in db it will use sample to show result )
 
-The  data will be fecthed in every 2 mins and it can be seen in the backend dir console and in the UI its shown as current weather data (if the  readingis  NA , wait for second reading  then cange the city and check)
-the user can select the city from the provided dropdown 
-
-The  data(the aggregrated data like avg, min, max) will be stored in database at midnight of every day 
 
 # Security Considerations
 
