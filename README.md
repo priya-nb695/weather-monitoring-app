@@ -22,6 +22,7 @@ This project implements a real-time data processing system that monitors weather
                npm install
 
    (if needed additional library use below commands ) 
+               
                npm install express axios node-cron mongoose cors dotenv
                npm install --save-dev nodemon supertest jest
    
@@ -36,7 +37,9 @@ This project implements a real-time data processing system that monitors weather
    
                cd weather-frontend
                npm install
+
     (if needed additional library use below command)
+             
                npm i  react-chartjs-2 chart.js
 
 
