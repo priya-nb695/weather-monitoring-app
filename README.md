@@ -6,51 +6,53 @@ This project implements a real-time data processing system that monitors weather
 ## Installation Instructions
 1. Clone the repository: `https://github.com/priya-nb695/weather-monitoring-app.git`
    
-    git clone https://github.com/priya-nb695/weather-monitoring-app.git
+              git clone https://github.com/priya-nb695/weather-monitoring-app.git
 
 2. Install Monogodb for storing 
 
-   https://www.mongodb.com/try/download/community    
+               https://www.mongodb.com/try/download/community    
 
 3. Navigate to the root directory and install dependencies: 
    
-    cd  weather-monitoring-system
+               cd  weather-monitoring-system
     
 4. Navigate to Backend
 
-     cd backend 
-     npm install
-     (if needed additional library use below commands ) 
-     npm install express axios node-cron mongoose cors dotenv
-     npm install --save-dev nodemon supertest jest
+               cd backend 
+               npm install
+
+   (if needed additional library use below commands ) 
+               npm install express axios node-cron mongoose cors dotenv
+               npm install --save-dev nodemon supertest jest
    
     # Setup Environment Variables (env file)  in backend  : Create a .env file with the following fields:
     .env ---> with this 
-     ex:   WEATHER_API_KEY=your_api_key
+     ex:   
+               WEATHER_API_KEY=your_api_key
            
-           PORT=3001
+               PORT=3001
 
 5. Navigate to the frontend directory and install dependencies
    
-    cd weather-frontend
-    npm install
+               cd weather-frontend
+               npm install
     (if needed additional library use below command)
-    npm i  react-chartjs-2 chart.js
+               npm i  react-chartjs-2 chart.js
 
 
 6. Start the backend server:
    
-   cd backend
-   node index.js
+               cd backend
+               node index.js
   
 7. Start the frontend app:
 
-   cd weather-frontend
-   npm start
+               cd weather-frontend
+               npm start
 
 8. To test backend 
-   cd backend
-   npm test
+               cd backend
+               npm test
 
 
    
