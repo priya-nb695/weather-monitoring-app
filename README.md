@@ -51,11 +51,20 @@ This project implements a real-time data processing system that monitors weather
                npm start
 
 8. To test backend:
- 
+
                cd backend
                npm test
 
+9. To test the api separately: Download and use Postman app
+              
+               https://www.postman.com/downloads/
+               
+               api endpoints:
+               '/weather-summaries'   route to get daily  weather summaries(GET)
 
+                '/add-sample-data'    route to add testing data (POST)
+
+                '/current-weather'     route to get current weather data(GET)
    
 # Usage Instructions
 
