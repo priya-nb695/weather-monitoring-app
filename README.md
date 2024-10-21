@@ -27,6 +27,7 @@ This project implements a real-time data processing system that monitors weather
     # Setup Environment Variables (env file)  in backend  : Create a .env file with the following fields:
     .env ---> with this 
      ex:   WEATHER_API_KEY=your_api_key
+           
            PORT=3001
 
 5. Navigate to the frontend directory and install dependencies
