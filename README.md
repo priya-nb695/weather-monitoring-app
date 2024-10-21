@@ -50,7 +50,8 @@ This project implements a real-time data processing system that monitors weather
                cd weather-frontend
                npm start
 
-8. To test backend 
+8. To test backend:
+ 
                cd backend
                npm test
 
